@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="政理是一个以定义、直觉、理论推导和现实联系为核心的考研政治概念自学网站。">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>政理｜考研政治概念自学</title>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+  >
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./js/data.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="课程导航">
+      <div class="sidebar-header">
+        <a class="brand" href="./index.html" aria-label="政理首页">
+          <span class="brand-mark" aria-hidden="true">
+            <i class="fa-solid fa-book-open"></i>
+          </span>
+          <span class="brand-copy">
+            <strong>政理</strong>
+            <small>为理解而学</small>
+          </span>
+        </a>
+        <button
+          class="icon-button sidebar-close"
+          id="sidebar-close"
+          type="button"
+          aria-label="收起导航栏"
+          aria-controls="sidebar"
+          aria-expanded="true"
+        >
+          <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="course-nav" aria-label="五大学习板块">
+        <p class="nav-label">学习板块</p>
+        <ul class="module-list">
+          <li class="module-item">
+            <details class="module" id="maya" open>
+              <summary>
+                <span class="module-title">
+                  <i class="fa-solid fa-atom" aria-hidden="true"></i>
+                  <span>
+                    <strong>马原</strong>
+                    <small>马克思主义基本原理</small>
+                  </span>
+                </span>
+                <i class="fa-solid fa-chevron-down module-chevron" aria-hidden="true"></i>
+              </summary>
+              <ul class="concept-list">
+                <li>
+                  <a class="concept-link is-active" href="#matter-and-consciousness" data-module="maya" data-concept-id="matter-and-consciousness" aria-current="page">
+                    物质与意识
+                  </a>
+                </li>
+                <li><a class="concept-link" href="#practice-and-knowledge" data-module="maya" data-concept-id="practice-and-knowledge">实践与认识</a></li>
+                <li><a class="concept-link" href="#contradiction" data-module="maya" data-concept-id="contradiction">矛盾及其运动</a></li>
+                <li><a class="concept-link" href="#social-development" data-module="maya" data-concept-id="social-development">社会发展规律</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="module-item">
+            <details class="module">
+              <summary>
+                <span class="module-title">
+                  <i class="fa-solid fa-flag" aria-hidden="true"></i>
+                  <span>
+                    <strong>毛概</strong>
+                    <small>毛泽东思想与中国特色社会主义理论体系</small>
+                  </span>
+                </span>
+                <i class="fa-solid fa-chevron-down module-chevron" aria-hidden="true"></i>
+              </summary>
+              <ul class="concept-list">
+                <li><a class="concept-link" href="#new-democratic-revolution" data-module="maogai" data-concept-id="new-democratic-revolution">新民主主义革命理论</a></li>
+                <li><a class="concept-link" href="#socialist-transformation" data-module="maogai" data-concept-id="socialist-transformation">社会主义改造理论</a></li>
+                <li><a class="concept-link" href="#socialist-construction" data-module="maogai" data-concept-id="socialist-construction">社会主义建设道路探索</a></li>
+                <li><a class="concept-link" href="#deng-xiaoping-theory" data-module="maogai" data-concept-id="deng-xiaoping-theory">邓小平理论</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="module-item">
+            <details class="module">
+              <summary>
+                <span class="module-title">
+                  <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+                  <span>
+                    <strong>史纲</strong>
+                    <small>中国近现代史纲要</small>
+                  </span>
+                </span>
+                <i class="fa-solid fa-chevron-down module-chevron" aria-hidden="true"></i>
+              </summary>
+              <ul class="concept-list">
+                <li><a class="concept-link" href="#anti-aggression-struggle" data-module="shigang" data-concept-id="anti-aggression-struggle">反侵略斗争</a></li>
+                <li><a class="concept-link" href="#xinhai-revolution" data-module="shigang" data-concept-id="xinhai-revolution">辛亥革命</a></li>
+                <li><a class="concept-link" href="#new-democratic-history" data-module="shigang" data-concept-id="new-democratic-history">新民主主义革命历程</a></li>
+                <li><a class="concept-link" href="#socialist-system-establishment" data-module="shigang" data-concept-id="socialist-system-establishment">社会主义基本制度确立</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="module-item">
+            <details class="module">
+              <summary>
+                <span class="module-title">
+                  <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                  <span>
+                    <strong>思修</strong>
+                    <small>思想道德与法治</small>
+                  </span>
+                </span>
+                <i class="fa-solid fa-chevron-down module-chevron" aria-hidden="true"></i>
+              </summary>
+              <ul class="concept-list">
+                <li><a class="concept-link" href="#ideals-and-beliefs" data-module="sixiu" data-concept-id="ideals-and-beliefs">理想与信念</a></li>
+                <li><a class="concept-link" href="#chinese-spirit" data-module="sixiu" data-concept-id="chinese-spirit">中国精神</a></li>
+                <li><a class="concept-link" href="#core-values" data-module="sixiu" data-concept-id="core-values">社会主义核心价值观</a></li>
+                <li><a class="concept-link" href="#morality-and-law" data-module="sixiu" data-concept-id="morality-and-law">道德与法治</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="module-item">
+            <details class="module">
+              <summary>
+                <span class="module-title">
+                  <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+                  <span>
+                    <strong>时政</strong>
+                    <small>形势与政策</small>
+                  </span>
+                </span>
+                <i class="fa-solid fa-chevron-down module-chevron" aria-hidden="true"></i>
+              </summary>
+              <ul class="concept-list">
+                <li><a class="concept-link" href="#domestic-affairs" data-module="shizheng" data-concept-id="domestic-affairs">国内时政</a></li>
+                <li><a class="concept-link" href="#international-affairs" data-module="shizheng" data-concept-id="international-affairs">国际时政</a></li>
+                <li><a class="concept-link" href="#major-meetings" data-module="shizheng" data-concept-id="major-meetings">重大会议</a></li>
+                <li><a class="concept-link" href="#policy-documents" data-module="shizheng" data-concept-id="policy-documents">政策文件</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+        <p>不以背诵替代思考，在概念之间建立联系。</p>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button
+          class="icon-button sidebar-toggle"
+          id="sidebar-toggle"
+          type="button"
+          aria-label="展开或收起导航栏"
+          aria-controls="sidebar"
+          aria-expanded="true"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <form class="search-form" id="search-form" role="search">
+          <label class="sr-only" for="concept-search">搜索政治概念</label>
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input
+            id="concept-search"
+            name="q"
+            type="search"
+            placeholder="搜索概念、定义或现实问题…"
+            autocomplete="off"
+          >
+          <button class="sr-only" type="submit">搜索</button>
+        </form>
+
+        <div class="topbar-actions">
+          <button
+            class="action-button"
+            id="favorites-button"
+            type="button"
+            aria-label="查看收藏的概念"
+            aria-pressed="false"
+          >
+            <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+            <span class="action-label">收藏</span>
+            <span class="favorites-count" id="favorites-count" aria-label="0 个收藏">0</span>
+          </button>
+          <button
+            class="action-button"
+            id="theme-toggle"
+            type="button"
+            aria-label="切换到深色模式"
+            title="切换深色或浅色模式"
+          >
+            <i class="fa-solid fa-moon" id="theme-icon" aria-hidden="true"></i>
+            <span class="action-label" id="theme-label">深色模式</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content" id="main-content" tabindex="-1">
+        <noscript>
+          <p class="noscript-message">当前可以阅读示例内容；启用 JavaScript 后可使用搜索、收藏和主题切换功能。</p>
+        </noscript>
+
+        <section class="search-results" id="search-results" aria-live="polite" hidden>
+          <h2>搜索结果</h2>
+          <div id="search-results-list"></div>
+        </section>
+
+        <article class="concept-article" id="concept-content" data-current-concept="matter-and-consciousness">
+          <header class="concept-header">
+            <nav class="breadcrumb" aria-label="当前位置">
+              <ol>
+                <li><a href="#maya">马原</a></li>
+                <li aria-current="page">物质与意识</li>
+              </ol>
+            </nav>
+
+            <div class="concept-heading-row">
+              <div>
+                <p class="concept-kicker">唯物论 · 基础概念</p>
+                <h1 id="concept-title">物质与意识</h1>
+                <p class="concept-summary">从“世界是什么”出发，理解客观存在、主观认识与实践活动之间的关系。</p>
+              </div>
+              <button
+                class="save-concept-button"
+                id="favorite-concept"
+                type="button"
+                aria-label="收藏“物质与意识”"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+                <span>收藏概念</span>
+              </button>
+            </div>
+          </header>
+
+          <section class="concept-section" id="definition" aria-labelledby="definition-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">01</span>
+              <div>
+                <p class="section-eyebrow">Definition</p>
+                <h2 id="definition-title">概念定义</h2>
+              </div>
+            </div>
+            <div class="section-body">
+              <p><strong>物质</strong>是标志客观实在的哲学范畴。它不依赖于人的意识而存在，并能为人的意识所反映。</p>
+              <p><strong>意识</strong>是物质世界长期发展的产物，是人脑的机能和属性，是客观世界的主观映象。</p>
+              <blockquote class="key-point">
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                <p>核心关系：物质决定意识，意识对物质具有能动的反作用，这种作用必须通过实践实现。</p>
+              </blockquote>
+            </div>
+          </section>
+
+          <section class="concept-section" id="intuition" aria-labelledby="intuition-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">02</span>
+              <div>
+                <p class="section-eyebrow">Intuition</p>
+                <h2 id="intuition-title">直觉理解</h2>
+              </div>
+            </div>
+            <div class="section-body">
+              <p>可以把物质理解为<strong>不因个人愿望而改变的客观条件</strong>，把意识理解为人们对这些条件的认识、判断、计划与价值选择。</p>
+              <div class="example-card">
+                <h3><i class="fa-solid fa-seedling" aria-hidden="true"></i> 一个学习例子</h3>
+                <p>已有基础、可用时间和身体状态是制定学习计划时需要面对的客观条件；目标与方案属于意识活动。合理方案能帮助人改善学习状态，但愿望本身不会直接改变现实，只有付诸实践才能产生作用。</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="concept-section" id="derivation" aria-labelledby="derivation-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">03</span>
+              <div>
+                <p class="section-eyebrow">Derivation</p>
+                <h2 id="derivation-title">理论推导</h2>
+              </div>
+            </div>
+            <div class="section-body">
+              <ol class="argument-chain">
+                <li><strong>世界的统一性在于物质性：</strong>自然界和人类社会都不以某个主体的意志为转移。</li>
+                <li><strong>意识不是独立本原：</strong>它是物质世界长期发展的结果，并以人脑这一物质器官为基础。</li>
+                <li><strong>意识的内容来自客观世界：</strong>但认识形式具有主观性，因此可能正确，也可能发生偏差。</li>
+                <li><strong>意识能够反作用于物质：</strong>认识形成目的与方案，再通过实践把观念中的目标转化为现实结果。</li>
+              </ol>
+              <p class="section-note">由此既要反对否认物质决定作用的唯心主义，也要避免把意识理解成完全被动、毫无作用的机械反映。</p>
+            </div>
+          </section>
+
+          <section class="concept-section" id="reality" aria-labelledby="reality-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">04</span>
+              <div>
+                <p class="section-eyebrow">In Reality</p>
+                <h2 id="reality-title">现实联系</h2>
+              </div>
+            </div>
+            <div class="section-body reality-grid">
+              <section class="reality-card">
+                <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                <h3>公共决策</h3>
+                <p>政策需要从人口、资源、产业等实际条件出发，同时在调查与反馈中修正认识，避免仅凭主观愿望决策。</p>
+              </section>
+              <section class="reality-card">
+                <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                <h3>科学实践</h3>
+                <p>理论为实验提供方向，实验又检验并修正理论，体现认识与实践相互作用、不断深化的过程。</p>
+              </section>
+            </div>
+          </section>
+
+          <section class="concept-section" id="application" aria-labelledby="application-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">05</span>
+              <div>
+                <p class="section-eyebrow">Use &amp; Limits</p>
+                <h2 id="application-title">用途与边界</h2>
+              </div>
+            </div>
+            <div class="section-body">
+              <ul class="use-list">
+                <li><strong>用途：</strong>帮助区分客观条件与主观判断，在分析问题时同时关注事实依据和人的能动性。</li>
+                <li><strong>边界：</strong>“物质决定意识”不意味着每个具体想法都能由现实条件机械推出，也不意味着人的选择毫无主动性。</li>
+                <li><strong>进一步思考：</strong>为什么正确认识有时仍无法带来预期结果？实践条件在其中发挥了什么作用？</li>
+              </ul>
+            </div>
+          </section>
+
+          <footer class="concept-footer">
+            <p><i class="fa-solid fa-circle-info" aria-hidden="true"></i> 当前内容为详情结构示例，后续将由概念数据动态更新。</p>
+            <a class="next-concept" href="#practice-and-knowledge" data-concept-id="practice-and-knowledge">
+              <span>
+                <small>下一概念</small>
+                <strong>实践与认识</strong>
+              </span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </footer>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p>政理 · 为理解而学</p>
+        <a href="./README.md">项目说明</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
